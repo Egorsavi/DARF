@@ -1,0 +1,20 @@
+using System;
+
+namespace ConsoleApp1
+{
+    internal class ConsoleApp1
+    {
+        static void Main(string[] args)
+        {
+            for (double i = -Math.PI / 2; i <= Math.PI / 2; i+=Math.PI/20)
+            {
+                if (Math.Abs(i) == Math.PI/2)
+                {
+                    Console.WriteLine("{0,25} {1,25}", i, 0);
+                }
+                if (i==0) continue;
+                Console.WriteLine("{0,25} {1,25}", i, 1/Math.Tan(i));
+            }
+        }
+    }
+}
