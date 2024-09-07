@@ -1,0 +1,32 @@
+using System;
+
+namespace ConsoleApp1
+{
+    internal class ConsoleApp1
+    {
+        static void Main(string[] args)
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[n];
+            Random randNum = new Random();
+            int negative = 0, minn=a[0], k=0, summ=0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i] = randNum.Next(-100, 100);
+                Console.Write($"{a[i]} ");
+                if (a[i] < 0) negative++;
+                if (a[i] < minn)
+                {
+                    k = i;
+                    minn = a[i];
+                }
+            }
+            Console.WriteLine();
+            for (int i = k + 1; i < a.Length; i++)
+            {
+                summ += a[i];
+            }
+            Console.WriteLine($"{negative} {summ}");
+        }
+    }
+}
