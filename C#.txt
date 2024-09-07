@@ -1,0 +1,14 @@
+using System;
+
+namespace ConsoleApp1
+{
+    internal class ConsoleApp1
+    {
+        static void Main(string[] args)
+        {
+            string[] day_week = {"понеділок", "вівторок", "середа", "четвер", "п'ятниця", "субота", "неділя"};
+            int a = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine(day_week[a-1]);
+        }
+    }
+}
